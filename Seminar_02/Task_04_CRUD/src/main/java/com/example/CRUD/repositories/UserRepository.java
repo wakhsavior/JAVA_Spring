@@ -10,9 +10,11 @@ import java.util.List;
 @Repository
 public class UserRepository {
     private final JdbcTemplate jdbc;
-    public UserRepository(JdbcTemplate jdbc){
+
+    public UserRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
+
     public List<User> findAll() {
         String sql = "SELECT * FROM userTable";
 
@@ -30,9 +32,18 @@ public class UserRepository {
     public User save(User user) {
         String sql = "INSERT INTO userTable (firstName,lastName) VALUES ( ?, ?)";
         jdbc.update(sql, user.getFirstName(), user.getLastName());
-        return  user;
+        return user;
     }
 
-    //public void deleteById(int id)
-    //"DELETE FROM userTable WHERE id=?"
+    public void deleteById(int id) {
+        String sql = "DELETE FROM userTable WHERE id=?";
+        jdbc.update(sql, id);
+    }
+
+    public void updateById(User user) {
+//        String sql = "UPDATE userTable SET ";
+        /**
+         * TODO
+         */
+    }
 }

@@ -1,5 +1,6 @@
-package net.ddns.wak.Java.Spring;
+package net.ddns.wak.Java.Spring.repository;
 
+import net.ddns.wak.Java.Spring.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

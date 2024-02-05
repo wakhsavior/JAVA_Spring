@@ -19,6 +19,12 @@
         <td th:text="${user.email}"></td>
     </tr>
 </table>
+<h2>Add new user</h2>
+<form action="/users" method="post">
+    User name: <input type="text" name="name"><br/>
+    User email: <input type="text" name="email"><br/>
+    <button type="submit"> Add User</button>
+</form>
 
 </body>
 </html>

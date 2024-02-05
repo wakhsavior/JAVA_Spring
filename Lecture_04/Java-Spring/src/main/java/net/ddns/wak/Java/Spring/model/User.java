@@ -1,4 +1,4 @@
-package net.ddns.wak.Java.Spring;
+package net.ddns.wak.Java.Spring.model;
 
 public class User {
     private Long id;

@@ -13,5 +13,8 @@ public class MainController {
     public String cats(){
         return "cats.html";
     }
+    @RequestMapping("/")
+    public String index(){return "index.html";}
+
 
 }

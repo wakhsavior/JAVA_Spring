@@ -14,9 +14,13 @@ public class UserController {
     public String welcome(){
         return "index.html";
     }
-    @GetMapping("/about")
-    public String about(){
-        return "about.html";
+    @GetMapping("/about/me")
+    public String aboutme(){
+        return "aboutme.html";
+    }
+    @GetMapping("/about/company")
+    public String aboutcompany(){
+        return "aboutcompany.html";
     }
 
 }

@@ -1,42 +1,54 @@
 package com.example.Seminar_04.Homework.model;
 
+import com.example.Seminar_04.Homework.Exceptions.UserInputException;
+
 import java.util.Arrays;
 
 public class IP {
-    private byte[] octets = new byte[4];
+    private int intIP;
+
+    public static IP createIP(String s) {
+        IP ip = new IP();
+        ip.setIP(s);
+        return ip;
+    }
+
+    public static IP createIP(int intIP) {
+        IP ip = new IP();
+        ip.setIP(intIP);
+        return ip;
+    }
+
+
+    public void setIP(int intIP) {
+        this.intIP = intIP;
+    }
+
+    public void setIP(String string) {
+        string = string.strip();
+        String[] octetsString = string.split("\\.");
+        if (octetsString.length != Integer.BYTES) {
+            throw new UserInputException("Недопустимая длина массива: ", String.valueOf(octetsString.length));
+        }
+        for (int i = 0; i < octetsString.length; i++) {
+            int octet = Integer.parseInt(octetsString[i]);
+            if (octet < 0 || octet > 255) {
+                throw new UserInputException("Недопустимое значение в массиве: ", octetsString[i]);
+            }
+            intIP = intIP + (octet << (Byte.SIZE * (Integer.BYTES - i - 1)));
+
+        }
+    }
 
     @Override
     public String toString() {
+        StringBuilder stringIP = new StringBuilder();
 
-        return octets[0] + "."+ octets[1] + "." + octets[2] + "." + octets[3];
-    }
-    public void getIP(byte[] octets){
-        if (octets.length != 4){
-            throw new RuntimeException("Недопустимая длина массива");
+        for (int i = 0; i < Integer.BYTES; i++) {
+            stringIP.append(Integer.toString(intIP << (Byte.SIZE * i) >>> (Byte.SIZE * (Integer.BYTES - 1))));
+            stringIP.append(".");
         }
-        this.octets = octets;
-    }
-    public void getIP(int[] octets){
-        if (octets.length != 4){
-            throw new RuntimeException("Недопустимая длина массива");
-        }
-        for (int i = 0; i < octets.length; i++) {
-            if (octets[i]>0 && octets[i]<256){
-                this.octets[i] = (byte)octets[i];
-            }else {
-               throw new RuntimeException("Недопустимые значения в массиве" + octets);
-            }
-
-        }
-    }
-    public void getIP(String string){
-        String[] octetsString = string.split(".");
-        if (octetsString.length != 4){
-            throw new RuntimeException("Недопустимая длина массива");
-        }
-        for (int i = 0; i < octetsString.length; i++) {
-            []
-        }
-
+        stringIP.deleteCharAt(stringIP.length() - 1);
+        return stringIP.toString();
     }
 }

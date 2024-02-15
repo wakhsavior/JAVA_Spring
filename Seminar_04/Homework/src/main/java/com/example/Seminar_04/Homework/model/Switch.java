@@ -4,14 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-@Component
+
 @Data
 public class Switch {
-    IP ipAddress;
-    IP ipDefGW;
-    String hostname;
-    String model;
-    String vendor;
-    String serialNum;
+    private final int id ;
+    private IP ipAddress;
+//    private final IP ipDefGW;
+//    private final IP netMask;
+    private String hostname;
+    private String model;
+    private String vendor;
+//    private final String serialNum;
 
+    public Switch(int id) {
+        this.id = id;
+    }
 }

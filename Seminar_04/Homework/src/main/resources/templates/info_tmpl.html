@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="p-2" style="width: 900px;" th:fragment="switches">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">IP addres</th>
+                <th scope="col">Hostname</th>
+                <th scope="col">Model</th>
+                <th scope="col">Vendor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${switch.getIpAddress}">172.16.0.1</td>
+                <td th:text="${switch.getHostname}">MP-DC-SW-R1-01</td>
+                <td th:text="${switch.getModel}">WS-C2960X-48FPD-L</td>
+                <td th:text="${switch.getVendor}">Cisco</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="d-flex flex-column p-3 text-bg-light w-auto">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">IP address</label>
+                    <input type="IPAddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="p-2" style="width: 900px;" th:fragment="aboutme">
+        <div class="d-flex flex-column p-3 text-bg-light w-auto">
+            <h1>Савельев Денис Андреевич</h1>
+            <p>Я пока только учусь на разработчика, Немного уже знаю ООП, Java, Python, C#. Имею опыт написания скриптов на Bash, Perl.
+            Программирование меня сопровождает на протяжении всей жизни, самую первую книгу по программированию я купил когда мне было 11 лет,
+             это был Quick Basic. На протяжении всей жизни я автоматизировал какие-то задачи с использованием программирования по своей работе.
+            Но только сейчас добрался до полноценного изучения.</p>
+        </div>
+    </div>
+    <div class="p-2" style="width: 900px;" th:fragment="aboutcompany">
+        <div class="d-flex flex-column p-3 text-bg-light w-auto">
+            <h1>ИП Савельев</h1>
+            <p>У меня и моей команды есть богатый опыт в системной интеграции и телекоме, наша команда может вам помочь в
+                области сетей передачи данных, WiFi, видеонаблюдения, построения ИТ инфраструктуры. Так-же в нашей команде
+                есть инженеры различных направлений, проектировщики СКС и электроснабжения.</p>
+            <h2>Наша команда:</h2>
+            <ul>
+                <li>Денис Савельев - Ведущий инженер, руководитель проектов</li>
+                <li>Кирилл Сукач - проектировщик, руководитель проектов</li>
+                <li>Дмитрий Милов - Ведущий инженер</li>
+                <li>... это только ключевый фигуры, список не полный</li>
+            </ul>
+        </div>
+    </div>
+<div th:fragment="index"></div>
+</body>
+</html>
+

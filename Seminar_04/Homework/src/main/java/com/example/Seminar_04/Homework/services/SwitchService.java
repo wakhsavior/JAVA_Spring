@@ -14,8 +14,8 @@ import java.util.Optional;
 public class SwitchService {
     private final SwitchRepository switchRepository;
 
-    public void createSwitch(String ipAddress, String hostname, String model, String vendor) {
-        switchRepository.createSwitch(ipAddress, hostname, model, vendor);
+    public void addSwitch(Switch sw) {
+        switchRepository.save(sw);
     }
 
     public List<Switch> findAll() {

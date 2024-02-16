@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 
 
 @Data
+@AllArgsConstructor
 public class Switch {
-    private final int id ;
+    private Integer id ;
     private IP ipAddress;
 //    private final IP ipDefGW;
 //    private final IP netMask;
@@ -16,7 +17,14 @@ public class Switch {
     private String vendor;
 //    private final String serialNum;
 
-    public Switch(int id) {
-        this.id = id;
+
+    public String getIpAddress() {
+        return ipAddress.toString();
+    }
+    public void setIpAddress(String ip){
+        ipAddress = IP.createIP(ip);
+    }
+    public void setIpAddress(IP ip){
+        ipAddress = ip;
     }
 }

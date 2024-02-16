@@ -1,15 +1,18 @@
 package com.example.Seminar_04.Homework.controller;
 
+import com.example.Seminar_04.Homework.Exceptions.UserInputException;
+import com.example.Seminar_04.Homework.model.Switch;
 import com.example.Seminar_04.Homework.repository.SwitchRepository;
 import com.example.Seminar_04.Homework.services.SwitchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
 
@@ -46,7 +49,13 @@ public class UserController {
     public String switches(Model model) {
         model.addAttribute("title","Switches");
         model.addAttribute("info","switches");
+        model.addAttribute("switches",switchService.findAll());
         return "main_tmpl.html";
     }
-
+    @PostMapping("/addswitch")
+    public String addSwitch(Switch sw, Model model){
+        System.out.println(sw);
+        switchService.addSwitch(sw);
+        return "redirect:/switches.html";
+    }
 }

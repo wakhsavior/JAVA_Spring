@@ -9,22 +9,15 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Repository
 @RequiredArgsConstructor
 @Getter
 public class SwitchRepository {
     private final List<Switch> switches;
-    private int id = 1;
+    private AtomicInteger counter = new AtomicInteger();
 
-    public Switch createSwitch(String ipAddress, String hostname, String model, String vendor) {
-        Switch sw = new Switch(id++);
-        sw.setIpAddress(IP.createIP(ipAddress));
-        sw.setHostname(hostname);
-        sw.setModel(model);
-        sw.setVendor(vendor);
-        return sw;
-    }
 
     public void deleteSwitchById(int id) {
         Optional sw = getSwitchById(id);
@@ -41,15 +34,11 @@ public class SwitchRepository {
         return Optional.empty();
     }
 
-    public void updateSwitchById(int id, String ipAddress, String hostname, String model, String vendor) {
-        Optional<Switch> swOpt = getSwitchById(id);
-        Switch sw;
-        if(swOpt.isPresent()){
-            sw = swOpt.get();
-            sw.setIpAddress(IP.createIP(ipAddress));
-            sw.setHostname(hostname);
-            sw.setModel(model);
-            sw.setVendor(vendor);
+    public Switch save(Switch sw) {
+        if (sw.getId() == null) {
+            sw.setId(counter.incrementAndGet());
         }
+        switches.add(sw);
+        return sw;
     }
 }

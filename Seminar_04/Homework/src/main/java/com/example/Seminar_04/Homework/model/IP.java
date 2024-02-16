@@ -1,9 +1,10 @@
 package com.example.Seminar_04.Homework.model;
 
 import com.example.Seminar_04.Homework.Exceptions.UserInputException;
+import lombok.Data;
 
 import java.util.Arrays;
-
+@Data
 public class IP {
     private int intIP;
 
@@ -17,6 +18,12 @@ public class IP {
         IP ip = new IP();
         ip.setIP(intIP);
         return ip;
+    }
+    public IP(String ip){
+        setIP(ip);
+    }
+    public IP(){
+
     }
 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="p-2 text-center" th:fragment="showtask" >
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="p-2" >Задачи начатые</div>
+            </div>
+            <div class="d-flex" th:each="task: ${tasks_created}">
+                <div class="p-2 flex-grow-1" th:utext="${task.getDescription} + ' <br> ' + ${task.getCreateDate}">
+                     A simple primary alert—check it out!
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/changestatus/{tasknum}(tasknum=${task.getId})}" role="button">Status</a>
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/deltask/{tasknum}(tasknum=${task.getId})}" role="button">Delete</a>
+                 </div>
+            </div>
+
+        </div>
+        <div class="col" >
+            <div class="row ">
+                <div class="p-2">Задачи в работе</div>
+            </div>
+            <div class="d-flex" th:each="task: ${tasks_inprogress}">
+                <div class="p-2 flex-grow-1" th:utext="${task.getDescription} + ' <br> ' + ${task.getCreateDate}">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/changestatus/{tasknum}(tasknum=${task.getId})}" role="button">Status</a>
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/deltask/{tasknum}(tasknum=${task.getId})}" role="button">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row ">
+                <div class="p-2">Задачи завершенные</div>
+            </div>
+            <div class="d-flex" th:each="task: ${tasks_completed}">
+                <div class="p-2 flex-grow-1" th:utext="${task.getDescription} + ' <br> ' + ${task.getCreateDate}">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/changestatus/{tasknum}(tasknum=${task.getId})}" role="button">Status</a>
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-primary" href="#" th:href = "@{/tasks/deltask/{tasknum}(tasknum=${task.getId})}" role="button">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

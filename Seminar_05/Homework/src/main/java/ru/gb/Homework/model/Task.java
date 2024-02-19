@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Класс задачи, содержит ID, описание, статус, время создания. Время создания заполняется
+ * автоматически конструктором во время создания экземпляра. ID назначается средствами БД
+ */
 @Data
 @Entity
 @Table(name = "tasks")
@@ -16,12 +20,11 @@ public class Task {
     private String description;
     @Column(nullable = false)
     private TaskStatus status;
+    @Column(nullable = false)
     Date createDate;
 
-    public Task(String description, TaskStatus status) {
+    public Task() {
         createDate = new Date();
-        this.description = description;
-        this.status = status;
-        status = TaskStatus.CREATED;
+        this.status = TaskStatus.CREATED;
     }
 }

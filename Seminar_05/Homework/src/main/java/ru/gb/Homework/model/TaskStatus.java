@@ -1,7 +1,8 @@
 package ru.gb.Homework.model;
 
-import jakarta.persistence.Entity;
-
+/**
+ * Возможные статусы задач
+ */
 
 public enum TaskStatus {
     CREATED,IN_PROGRESS,COMPLETED

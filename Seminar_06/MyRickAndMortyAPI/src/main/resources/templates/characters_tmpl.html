@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="d-sm-flex flex-column" th:fragment="characters">
+    <h2>Персонажи сериала Rick and Morty</h2>
+    <div class="d-flex flex-wrap">
+        <div class="d-flex flex-column" style="height: 400px;" th:each="character : ${characters}">
+            <p th:text="${character.getId}">Rick Sanchez</p>
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez" style=" height: 90%;">
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="d-sm-flex flex-column" th:fragment="character">
+    <h2>Информация о персонаже сериала Rick and Morty</h2>
+    <div class="d-flex flex-wrap">
+        <div class="d-flex flex-column" style="height: 600px;">
+            <h3 >Name: <span th:text="${character.getName}"></span></h3>
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez" style=" height: 90%;"
+                 th:attr="src=${character.getImage}, alt=${character.getName}">
+            <h3 >Status: <span th:text="${character.getStatus}"></span></h3>
+            <h3 >Species: <span th:text="${character.getSpecies}"></span></h3>
+            <h3 >Type: <span th:text="${character.getType}"></span></h3>
+            <h3 >Gender: <span th:text="${character.getGender}"></span></h3>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

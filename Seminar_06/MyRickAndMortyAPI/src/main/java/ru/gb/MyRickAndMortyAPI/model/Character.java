@@ -21,6 +21,15 @@ public class Character {
     private final List<String> episode;
     private final String url;
     private final String created;
+    public String showEpisodes(){
+        StringBuilder episodesString = new StringBuilder();
+        for (String episodeCur : episode){
+            episodesString.append(episodeCur);
+            episodesString.append(", ");
+        }
+        episodesString.delete(episodesString.length()-2,episodesString.length()-1);
+        return episodesString.toString();
+    }
 
     @Override
     public String toString() {

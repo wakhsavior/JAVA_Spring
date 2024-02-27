@@ -8,14 +8,17 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 @Data
-@RequiredArgsConstructor
 public class Location {
-    private final Integer id;
+    private  Integer id;
     private final String name;
-    private final String type;
-    private final String dimension;
-    private final List<String> residents;
+    private  String type;
+    private  String dimension;
+    private  List<String> residents;
     private final String url;
-    private final String created;
+    private  String created;
 
+    public Location(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
 }

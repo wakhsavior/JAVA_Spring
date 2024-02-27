@@ -1,6 +1,7 @@
 package ru.gb.MyRickAndMortyAPI.services;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import ru.gb.MyRickAndMortyAPI.model.Character;
 import ru.gb.MyRickAndMortyAPI.model.Request;
@@ -16,4 +17,7 @@ public class CharacterService {
     public Character getCharacterById(int id){
         return characterRepo.getCharacterById(id);
     }
+public Request<Character> getCharacterPage(String urlPage){
+        return characterRepo.getCharacterPage(urlPage);
+}
 }

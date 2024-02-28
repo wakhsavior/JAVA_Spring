@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="d-sm-flex flex-column" th:fragment="characters">
+    <h2>Персонажи сериала Rick and Morty</h2>
+    <div class="d-flex flex-wrap">
+        <div class="d-flex flex-column" style="height: 400px;" th:each="character : ${characters}">
+            <h3 th:text="${character.getName}">Rick Sanchez</h3>
+            <a th:href = "@{/characters/{id}(id=${character.getId})}"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez" style=" height: 90%;"
+                 th:attr="src=${character.getImage}, alt=${character.getName}">
+            </a>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#" th:href="@{/characters/previous}" >Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#" th:href="@{/characters/next}">Next</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="d-sm-flex flex-column" th:fragment="character">
+    <h2>Информация о персонаже сериала Rick and Morty</h2>
+    <div class="d-flex flex-wrap">
+        <div class="d-flex flex-column" style="height: 600px;">
+            <h3>Name: <span th:text="${character.getName}"></span></h3>
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez" style=" height: 90%;"
+                 th:attr="src=${character.getImage}, alt=${character.getName}">
+        </div>
+        <div class="d-flex flex-column">
+            <h3>Status: <span th:text="${character.getStatus}"></span></h3>
+            <h3>Species: <span th:text="${character.getSpecies}"></span></h3>
+            <h3>Type: <span th:text="${character.getType}"></span></h3>
+            <h3>Gender: <span th:text="${character.getGender}"></span></h3>
+            <h3>Location Origin: <span th:text="${character.getOrigin.getName}"></span></h3>
+            <h3>Location Current: <span th:text="${character.getLocation.getName}"></span></h3>
+            <h3>Episodes: <span th:text="${character.showEpisodes}"></span></h3>
+            <h3>URL: <span th:text="${character.getUrl}"></span></h3>
+            <h3>Creater: <span th:text="${character.getCreated}"></span></h3>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

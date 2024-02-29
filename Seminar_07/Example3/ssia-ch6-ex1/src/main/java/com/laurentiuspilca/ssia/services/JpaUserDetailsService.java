@@ -20,6 +20,8 @@ public class JpaUserDetailsService implements UserDetailsService {
     public CustomUserDetails loadUserByUsername(String username) {
         Supplier<UsernameNotFoundException> s =
                 () -> new UsernameNotFoundException("Problem during authentication!");
+        System.out.println(username);
+        System.out.println(userRepository.findAll());
 
         User u = userRepository.findUserByUsername(username).orElseThrow(s);
 

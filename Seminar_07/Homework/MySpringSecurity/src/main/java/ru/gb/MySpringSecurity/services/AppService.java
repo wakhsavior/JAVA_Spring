@@ -25,4 +25,7 @@ public class AppService {
     public void addUser (User user){
         appRepo.addUser(user);
     }
+    public List<User> getAllUsers(){
+        return appRepo.getAllUser();
+    }
 }

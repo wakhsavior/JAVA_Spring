@@ -51,5 +51,8 @@ public class AppRepo {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepo.save(user);
     }
+    public List<User> getAllUser(){
+        return userRepo.findAll();
+    }
 
 }

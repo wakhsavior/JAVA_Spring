@@ -50,7 +50,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
         System.out.println("Hello!");
-        return http.csrf().disable().authorizeHttpRequests(auth->auth.requestMatchers("api/welcome","api/new-user").permitAll()
+        return http.csrf().disable().authorizeHttpRequests(auth->auth.requestMatchers(
+                "api/welcome",
+                                "api/new-user",
+                                "api/get-users", "actuator/**").permitAll()
                 .requestMatchers("api/**").authenticated())
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();

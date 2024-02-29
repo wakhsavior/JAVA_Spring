@@ -95,4 +95,8 @@ public class AppController {
         System.out.println("Enter to create user");
         return "You do not create user, use Post Request";
     }
+    @GetMapping("/get-users")
+    public List<User> getAllUsers(){
+        return appService.getAllUsers();
+    }
 }

@@ -48,7 +48,7 @@ public class IntegrationConfiguration {
         return IntegrationFlow.from(Feed.inboundAdapter(
                 new URL("https://lenta.ru/rss"),"news"),
                 e-> e.poller(p->p.fixedDelay(5000))).
-                transform(extractLineFromRSS()).handle("myFileWriter").
+                transform(extractLineFromRSS()).handle(myFileWriter()).
                 get();
     }
 

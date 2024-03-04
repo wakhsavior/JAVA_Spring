@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.gb.Homework.model.Task;
 import ru.gb.Homework.model.TaskStatus;
+import ru.gb.Homework.services.FileGateway;
 import ru.gb.Homework.services.TaskService;
 
 import java.util.logging.Level;
@@ -23,6 +24,7 @@ import java.util.logging.Level;
 @RequiredArgsConstructor
 public class TaskController {
     private final TaskService taskService;
+    private final FileGateway fileGateway;
 
     /**
      * Реагирует на запрос /task и /task/. Выводит основную страницу работы с задачами.
@@ -51,6 +53,7 @@ public class TaskController {
     public String addTask(Task task, Model model){
         taskService.saveTask(task);
         log.log(Level.INFO,"Created Task: " + task.getDescription());
+        fileGateway.writeToFile(task.getId() + ".txt", task.getDescription());
         return "redirect:/tasks";
 
     }

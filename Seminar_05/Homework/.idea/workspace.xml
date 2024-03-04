@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce9f364-4578-4bf8-b4df-503f6f9d3382" name="Changes" comment="" />
+    <list default="true" id="6ce9f364-4578-4bf8-b4df-503f6f9d3382" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/controllers/TaskController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,17 +46,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HomeworkApplication.executor": "Run",
     "JUnit.TaskRepositoryIntegrationTest.WorkWithTaskTest.executor": "Run",
     "JUnit.TaskRepositoryIntegrationTest.executor": "Run",
     "JUnit.TaskRepositoryTest.createTask.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Seminar__10",
+    "git-widget-placeholder": "Seminar__12",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_05/Homework"
+    "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_12/Integration_RSS"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TaskRepositoryIntegrationTest">
+  <component name="RunManager" selected="Application.HomeworkApplication">
+    <configuration name="HomeworkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.gb.Homework.HomeworkApplication" />
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gb.Homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaskRepositoryIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <extension name="coverage">
@@ -101,6 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HomeworkApplication" />
         <item itemvalue="JUnit.TaskRepositoryIntegrationTest" />
         <item itemvalue="JUnit.TaskRepositoryIntegrationTest.WorkWithTaskTest" />
         <item itemvalue="JUnit.TaskRepositoryTest.createTask" />

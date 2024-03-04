@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d20d088-d86e-462b-979a-30e78c0eee2b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/controllers/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/controllers/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/repositories/AppRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/repositories/AppRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/services/AppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/java/ru/gb/MySpringSecurity/services/AppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework/MySpringSecurity/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2cwo9fAxqT5AdWonf8tIgHJHi30" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Example1Sem7Application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Seminar__07",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_07/Example3/ssia-ch6-ex1"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Example1Sem7Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.gb.Example1Sem7.Example1Sem7Application" />
+      <module name="Example1Sem7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.gb.Example1Sem7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Example1Sem7Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d20d088-d86e-462b-979a-30e78c0eee2b" name="Changes" comment="" />
+      <created>1709031851455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709031851455</updated>
+    </task>
+    <servers />
+  </component>
+</project>

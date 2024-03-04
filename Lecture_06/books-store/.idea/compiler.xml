@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+<<<<<<<< HEAD:Lecture_04/Java-Spring/.idea/compiler.xml
+        <module name="Java-Spring" />
+========
+        <module name="books-store" />
+>>>>>>>> Seminar_11:Lecture_06/books-store/.idea/compiler.xml
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<<< HEAD:Lecture_04/Java-Spring/.idea/compiler.xml
+      <module name="Java-Spring" options="-parameters" />
+========
+      <module name="books-store" options="-parameters" />
+>>>>>>>> Seminar_11:Lecture_06/books-store/.idea/compiler.xml
+    </option>
+  </component>
+</project>

@@ -3,6 +3,7 @@ package ru.gb.Homework.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.gb.Homework.Exceptions.TaskNotFoundException;
+import ru.gb.Homework.aspects.TrackUserAction;
 import ru.gb.Homework.model.Task;
 import ru.gb.Homework.model.TaskStatus;
 import ru.gb.Homework.repositories.TaskRepository;
@@ -22,6 +23,7 @@ public class TaskService {
      * Запрос к репозиторию всех созданных задач
      * @return Список всех задач
      */
+    @TrackUserAction
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
@@ -31,6 +33,7 @@ public class TaskService {
      * @param task Объек класса Task для сохранения
      * @return Возвращает созданную заявку
      */
+    @TrackUserAction
     public Task saveTask(Task task) {
         return taskRepository.save(task);
     }
@@ -40,7 +43,7 @@ public class TaskService {
      * @param status Статус запрашиваемых задач enum экземпляр
      * @return List заявок с одним статусом
      */
-
+    @TrackUserAction
     public List<Task> getTasksByStatus(TaskStatus status) {
         return taskRepository.findTaskByStatus(status);
     }
@@ -49,6 +52,7 @@ public class TaskService {
      * Циклическая смена статуса задачи с номером ID
      * @param id ID задачи для внесения изменения статуса
      */
+    @TrackUserAction
     public void changeTaskStatus(Long id) {
         TaskStatus status = TaskStatus.CREATED;
         Optional<Task> optTask = taskRepository.findById(id);
@@ -67,6 +71,7 @@ public class TaskService {
      * Удаление задачи по ID
      * @param id ID задачи для удаления
      */
+    @TrackUserAction
     public void deleteTaskById(Long id){
         taskRepository.deleteById(id);
     }
@@ -77,6 +82,7 @@ public class TaskService {
      * @return эклемпляр класса Task
      */
 
+    @TrackUserAction
     public Task getTaskById(Long id){
         if (taskRepository.findById(id).isPresent()) {
             return taskRepository.findById(id).get();

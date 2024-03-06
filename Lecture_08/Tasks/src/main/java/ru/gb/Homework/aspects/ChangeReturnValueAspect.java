@@ -8,10 +8,12 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class ChangeReturnValueAspect {
-    @AfterReturning(pointcut = "execution(* ru.gb.Homework.controllers.BaseController.getHomePage(..))", returning = "result")
-    public void changeString(JoinPoint joinPoint, String result){
-        System.out.println("Аспект изменения переменной был вызван " + result);
+    @AfterReturning(value = "execution(* ru.gb.Homework.controllers.BaseController.getHomePage(..))",returning = "result")
+    public Object changeString(JoinPoint joinPoint, Object result){
+        System.out.println("Аспект изменения переменной был вызван " + result.toString());
+
         result = "redirect:/aaaaaaa";
         System.out.println("Аспект изменения переменной был вызван " + result);
+        return result;
     }
 }

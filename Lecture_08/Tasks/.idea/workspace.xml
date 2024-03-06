@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce9f364-4578-4bf8-b4df-503f6f9d3382" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Seminar_05/Homework/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Seminar_05/Homework/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="6ce9f364-4578-4bf8-b4df-503f6f9d3382" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +47,7 @@
     "JUnit.TaskRepositoryTest.createTask.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Seminar__08",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_05/Homework"
   }

@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5fa49d6-5f28-4619-bf86-cc60eb01f285" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConfigServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApplication/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyHystrix/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyZuul/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +45,10 @@
     "Maven.Spring-microservices [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Lecture__09",
+    "git-widget-placeholder": "Seminar__09",
     "jdk.selected.JAVA_MODULE": "jbr-17",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_05/Homework",
     "onboarding.tips.debug.path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Lecture_09/Spring-microservices/MyHystrix/src/main/java/ru/gb/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -146,21 +143,6 @@
           <url>file://$PROJECT_DIR$/MyApplication/src/main/java/ru/gb/MyApplication.java</url>
           <line>13</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MyZuul/src/main/java/ru/gb/MyZuul.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ConfigServer/src/main/java/ru/gb/ConfigServer.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MyHystrix/src/main/java/ru/gb/MyHystrix.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

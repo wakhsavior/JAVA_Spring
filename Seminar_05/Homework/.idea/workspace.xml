@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ce9f364-4578-4bf8-b4df-503f6f9d3382" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Lecture_08/Tasks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lecture_08/Tasks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/aspects/AspectLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/aspects/AspectLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/aspects/ToLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/aspects/TrackUserAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/gb/Homework/services/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lecture_09/Spring-microservices/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lecture_09/Spring-microservices/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lecture_09/Spring-microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lecture_09/Spring-microservices/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
     "JUnit.TaskRepositoryTest.createTask.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Seminar__08",
+    "git-widget-placeholder": "Seminar__09",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/1_Learn_Programming/GeekBrains/Java_Spring/Seminar_05/Homework"
   }

@@ -1,0 +1,17 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    url: jdbc:postgresql://gblinuxlab:5432/Seminar_05_tasks
+    username: myuser
+    password: springdbPassw0rd
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: TaskManager
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -51,7 +51,7 @@ public class TaskController {
     public String addTask(Task task, Model model){
         taskService.saveTask(task);
         log.log(Level.INFO,"Created Task: " + task.getDescription());
-        return "redirect:/tasks";
+        return mainPage(model);
 
     }
 
@@ -65,7 +65,7 @@ public class TaskController {
     public String delTask(Model model, @PathVariable("id") Long id){
         taskService.deleteTaskById(id);
         log.log(Level.INFO,"Deleted Task: " + id);
-        return "redirect:/tasks";
+        return mainPage(model);
     }
 
     /**
@@ -74,9 +74,9 @@ public class TaskController {
      * @return Перенаправляет на основную страницу задач
      */
     @GetMapping("/changestatus/{id}")
-    public String changeStatus(@PathVariable  Long id){
+    public String changeStatus(Model model, @PathVariable  Long id){
         log.log(Level.INFO,"Change status for Task: " + id);
         taskService.changeTaskStatus(id);
-        return "redirect:/tasks";
+        return mainPage(model);
     }
 }

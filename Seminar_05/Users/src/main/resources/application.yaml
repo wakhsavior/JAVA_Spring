@@ -2,7 +2,7 @@ server:
   port: 8091
 spring:
   application:
-    name: TaskManager
+    name: UserManager
 eureka:
   client:
     service-url:

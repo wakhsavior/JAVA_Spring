@@ -1,22 +1,31 @@
 package ru.gb.services;
 
-import ru.gb.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.gb.domain.User;
+import ru.gb.repositories.UserRepository;
+
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
-    @Autowired
-    private NotificationService notificationService;
+    private final UserRepository userRepository;
 
-//    public UserService(NotificationService notificationService) {
-//        this.notificationService = notificationService;
-//    }
-    public User createUser(String name, int age, String email){
-       User user = new User();
-       user.setName(name);
-       user.setAge(age);
-       user.setEmail(email);
-       return user;
+    public List<User> findAll(){
+        return userRepository.findAll();
     }
+    public User saveUser(User user){
+        return userRepository.save(user);
+    }
+    public void deleteUser(int id){
+        userRepository.deleteById(id);
+    }
+    public void updateUser(User user){userRepository.updateById(user);}
+    public Optional<User> getUserById(int id){
+        return userRepository.getUserById(id);
+    }
+
 }
